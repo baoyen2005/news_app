@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.userfragment.ProfileFragmentUser">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtUserTittleProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito"
+            android:padding="10dp"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSaveInfoWhenEditUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn_saveprofile"
+            android:text="@string/save"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnLogOutInUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn_saveprofile"
+            android:text="@string/logout"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/linearmain"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="16dp"
+            android:background=" #E9EFF3"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserTittleProfile">
+
+            <ImageView
+                android:id="@+id/avatar_profile_fragment"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_image_avatar_fragment" />
+
+            <LinearLayout
+                android:id="@+id/lnchagneprf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvchangethisprf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/change_this_profile"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCurrentUserNameInUserProfileScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsblack"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="16dp"
+            android:background="#E9EFF3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearmain">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/username"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtUserNameInUserProfileScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edtext_inprofile_user"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgEditUsernameInUserProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_login_edittext"
+            android:src="@drawable/iconedit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearuser"
+            app:layout_constraintRight_toRightOf="@+id/linearuser"
+            app:layout_constraintTop_toTopOf="@+id/linearuser" />
+
+
+        <LinearLayout
+            android:id="@+id/linearpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background=" #E9EFF3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearuser">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtUserPasswordInUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edtext_inprofile_user"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                tools:ignore="TextViewEdits" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgEditPasswordInUserProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_login_edittext"
+            android:src="@drawable/iconedit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearpassword"
+            app:layout_constraintRight_toRightOf="@+id/linearpassword"
+            app:layout_constraintTop_toTopOf="@+id/linearpassword" />
+
+        <LinearLayout
+            android:id="@+id/linearaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background=" #E9EFF3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearpassword">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtAddressInUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/custom_edtext_inprofile_user"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgEditAddressInUserProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_login_edittext"
+            android:src="@drawable/iconedit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearaddress"
+            app:layout_constraintRight_toRightOf="@+id/linearaddress"
+            app:layout_constraintTop_toTopOf="@+id/linearaddress" />
+
+        <LinearLayout
+            android:id="@+id/linearphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background=" #E9EFF3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearaddress">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtPhoneInUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edtext_inprofile_user"
+                android:inputType="phone"
+                android:textSize="20sp"
+                tools:ignore="TextViewEdits" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgEditPhoneInProfileScreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_login_edittext"
+            android:src="@drawable/iconedit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearphone"
+            app:layout_constraintRight_toRightOf="@+id/linearphone"
+            app:layout_constraintTop_toTopOf="@+id/linearphone" />
+
+        <LinearLayout
+            android:id="@+id/linearEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background=" #E9EFF3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearphone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtUserEmailInUserProfileScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edtext_inprofile_user"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgEditEmailInUserProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_login_edittext"
+            android:src="@drawable/iconedit"
+            app:layout_constraintBottom_toBottomOf="@+id/linearEmail"
+            app:layout_constraintRight_toRightOf="@+id/linearEmail"
+            app:layout_constraintTop_toTopOf="@+id/linearEmail" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background=" #FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearEmail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
